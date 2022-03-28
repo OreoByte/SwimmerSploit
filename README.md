@@ -36,6 +36,8 @@ make -f Makefile.win OS_TARGET=win64 CPU_TARGET=x86_64
 
 ### Csharp/C#
 
+* Compile Csharp/C# on Linux for Linux
+
 ```bash
 dotnet build
 dotnet build solutionfile.sln
