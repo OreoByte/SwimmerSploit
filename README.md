@@ -109,3 +109,10 @@ GOOS=windows GOARCH=386 go build -o pwn.exe runner.go
 GOOS=windows GOARCH=amd64 go build -buildmode=c-shared -o pwn.dll loader.go
 GOOS=windows GOARCH=386 go build -buildmode=c-shared -o pwn.dll loader.go
 ```
+
+### Rust
+
+```bash
+rustc code.rs --target -target i686-unknown-linux-musl
+rustc -o exec.exe rust.rs --target i686-pc-windows-gnu
+```
