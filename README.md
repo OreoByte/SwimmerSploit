@@ -80,7 +80,7 @@ nim c filename.nim
 nim c filename.nim -o:./run.out
 ```
 
-* Compile on Nim Linux for Window
+* Compile Nim on Linux for Window
 
 ```bash
 min c -d:release -d:mingw --cpu=i386 project.nim 
@@ -100,7 +100,7 @@ go build hello.go
 go build -o run_me hello.go
 ```
 
-* Compile Golang/Goon Linux for Window
+* Compile Golang/Goon on Linux for Window
 
 ```bash
 GOOS=windows GOARCH=amd64 go build -o pwn.exe runner.go
@@ -112,7 +112,16 @@ GOOS=windows GOARCH=386 go build -buildmode=c-shared -o pwn.dll loader.go
 
 ### Rust
 
+* Compile Rust on Linux for Linux
+
 ```bash
-rustc code.rs --target -target i686-unknown-linux-musl
+rustc -o run.elf code.rs --target -target i686-unknown-linux-musl
+rustc -o run.elf code.rs
+```
+
+* Compile Rust on Linux for Window
+
+```bash
 rustc -o exec.exe rust.rs --target i686-pc-windows-gnu
+rustc -o exec.exe rust.rs --target x86_64-pc-windows-gnu
 ```
