@@ -9,7 +9,7 @@ SwimmerSploit is a collection of option fluid payloads that can perform mutiple 
 
 ### C++ 0r C
 
-* Compile C++/C on Linux for Linux
+* Compile C++/C on Linux for Linux.
 
 ```bash
 gcc linux.c -o compiled
@@ -18,7 +18,7 @@ g++ linux.cpp -o compiled
 make -f MakeFile
 ```
 
-* Compile C++/C on Linux for Windows
+* Compile C++/C on Linux for Windows.
 
 ```bash
 x86_64-w64-mingw32-gcc hello_world.c -o hi.exe
@@ -36,14 +36,14 @@ make -f Makefile.win OS_TARGET=win64 CPU_TARGET=x86_64
 
 ### Csharp/C#
 
-* Compile Csharp/C# on Linux for Linux
+* Compile Csharp/C# on Linux for Linux.
 
 ```bash
 dotnet build
 dotnet build solutionfile.sln
 ```
 
-* Compile Csharp/C# on Linux for Window
+* Compile Csharp/C# on Linux for Window.
 
 ```bash
 xbuild solution_file.sln # retired
@@ -56,14 +56,14 @@ mono-csc revshells.cs -out:runner.exe
 
 ### Python3
 
-* Compile Python3 on Linux for Linux
+* Compile Python3 on Linux for Linux.
 
 ```bash
 pyinstaller -F python3-code.py
 nuitka3 code.py --standalone --onefile 
 ```
 
-* Compile Python3 on Windows for Window
+* Compile Python3 on Windows for Window.
 
 ```bash
 pyinstaller -F python3-code.py
@@ -73,14 +73,14 @@ pyinstaller -F python3-code.py
 
 ### Nim
 
-* Compile Nim on Linux for Linux
+* Compile Nim on Linux for Linux.
 
 ```bash
 nim c filename.nim
 nim c filename.nim -o:./run.out
 ```
 
-* Compile Nim on Linux for Window
+* Compile Nim on Linux for Window.
 
 ```bash
 min c -d:release -d:mingw --cpu=i386 project.nim 
@@ -93,14 +93,14 @@ nim c -d:release -d:mingw --cpu=i386 --app:lib -o:./re.dll project_dll.nim
 
 ### Golang/Go
 
-* Compile Golang/Go on Linux for Linux
+* Compile Golang/Go on Linux for Linux.
 
 ```bash
 go build hello.go
 go build -o run_me hello.go
 ```
 
-* Compile Golang/Goon on Linux for Window
+* Compile Golang/Goon on Linux for Window.
 
 ```bash
 GOOS=windows GOARCH=amd64 go build -o pwn.exe runner.go
@@ -112,16 +112,26 @@ GOOS=windows GOARCH=386 go build -buildmode=c-shared -o pwn.dll loader.go
 
 ### Rust
 
-* Compile Rust on Linux for Linux
+* Compile Rust on Linux for Linux.
 
 ```bash
 rustc -o run.elf code.rs --target -target i686-unknown-linux-musl
 rustc -o run.elf code.rs
 ```
 
-* Compile Rust on Linux for Window
+* Compile Rust on Linux for Window.
 
 ```bash
+rustup target add x86_64-pc-windows-msvc
+rustup target add x86_64-pc-windows-gnu
+rustup target add i686-pc-windows-msvc
+rustup target add i686-pc-windows-gnu
+
 rustc -o exec.exe rust.rs --target i686-pc-windows-gnu
 rustc -o exec.exe rust.rs --target x86_64-pc-windows-gnu
+
+cargo build --target i686-pc-windows-gnu
+cargo run --target i686-pc-windows-gnu
 ```
+
+* NOTE that the compile targets are not installed by default.
